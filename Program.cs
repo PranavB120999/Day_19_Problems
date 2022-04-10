@@ -10,17 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("Please Enter your First name");
+                Console.WriteLine("\nPlease Enter your email");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2,}$");
+                Regex r = new Regex("^[A-Za-z0-9.+-]{1,}[a-zA-Z0-9]@[a-z0-9]{1,}.(co|org|com|in|us|net|au|com.com|com.au)$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your First name is " + true);
+                    Console.WriteLine("Entered Email is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Your First name is " + false);
-                    Console.WriteLine("First Name Should Contain Only Four Character");
+                    Console.WriteLine("Entered Email is not valid");
                 }
             }
         }
