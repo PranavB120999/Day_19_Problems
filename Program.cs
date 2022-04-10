@@ -10,17 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("Please Enter your First name");
+                Console.WriteLine("\nPlease Enter your mobile Number");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2,}$");
+                Regex r = new Regex("^[0-9]{2} [1-9][0-9]{9}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your First name is " + true);
+                    Console.WriteLine("your Mobile number is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Your First name is " + false);
-                    Console.WriteLine("First Name Should Contain Only Four Character");
+                    Console.WriteLine("Entered Mobile Number is not valid is not valid");
                 }
             }
         }
