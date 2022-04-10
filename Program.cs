@@ -10,17 +10,16 @@ namespace RegexProblem
 
             while (true)
             {
-                Console.WriteLine("Please Enter your First name");
+                Console.WriteLine("\nPlease Enter Password");
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2,}$");
+                Regex r = new Regex("^(?=.*[A-Z])(?=.*[0-9])[0-9A-Za-z]{8,}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your First name is " + true);
+                    Console.WriteLine("Entered Password is valid  ");
                 }
                 else
                 {
-                    Console.WriteLine("Your First name is " + false);
-                    Console.WriteLine("First Name Should Contain Only Four Character");
+                    Console.WriteLine("Entered Password is not valid");
                 }
             }
         }
